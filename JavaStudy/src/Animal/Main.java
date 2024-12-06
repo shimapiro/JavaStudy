@@ -18,6 +18,8 @@ public class Main {
 			if(animal instanceof Cat) {
 				Cat cat =(Cat)animal;
 				System.out.println("毛色"+cat.getColor());
+			}else {
+				System.out.println("未設定");
 			}
 			
 		}
