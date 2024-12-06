@@ -1,7 +1,7 @@
 package Animal;
 
 public class Cat extends Animal {
-    private final String catColor;
+    private  String catColor;
 
     public Cat(String name, int age, String catColor) {
         super(name, age);
