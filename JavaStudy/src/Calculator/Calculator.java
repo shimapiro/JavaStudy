@@ -1,5 +1,5 @@
 package Calculator;
-
+//電卓
 import java.util.Scanner;
 
 public class Calculator {
