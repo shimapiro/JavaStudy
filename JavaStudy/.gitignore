@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-/bin/
-=======
 .classpath
 .project
 .settings/
 bin/
 target/
 .DS_Store
->>>>>>> branch 'master' of https://github.com/shimapiro/JavaStudy.git
-=======
-.classpath
-.project
-.settings/
-bin/
-target/
-.DS_Store
->>>>>>> branch 'master' of https://github.com/shimapiro/JavaStudy.git
