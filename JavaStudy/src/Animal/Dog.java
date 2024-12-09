@@ -15,4 +15,8 @@ public class Dog extends Animal {
 	public void makeSound() {
 		System.out.println(getName()+"わんわん鳴きます");
 	}
+	
+	public void eated() {
+		System.out.println(getName()+"ドックフードを食べた");
+	}
 }

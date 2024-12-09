@@ -15,6 +15,7 @@ public class Main {
             System.out.println("名前" + animal.getName());
             System.out.println("年齢" + animal.getAge());
             animal.makeSound();
+            animal.eated();
 
             if (animal instanceof Cat) {
                 Cat cat = (Cat) animal;
