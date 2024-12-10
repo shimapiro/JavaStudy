@@ -27,4 +27,14 @@ public class TaskList {
 		}
 	}
 
+	public void removeTask(int index) {
+		if (index < 0 || index >= tasks.size()) {
+			System.out.println("無効な番号です");
+			return;
+		}
+
+		Task taskRmove = tasks.remove(index);
+		System.out.println("タスクを削除しました" + taskRmove.getDescription());
+	}
+
 }
