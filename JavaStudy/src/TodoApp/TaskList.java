@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TaskList {
-	private List<Task> tasks;
+	private List<Task> tasks= new ArrayList<Task>();
 
 	public TaskList() {
-		tasks = new ArrayList<Task>();
+		
 	}
 
 	public void addTask(String description) {

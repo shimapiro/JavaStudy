@@ -31,7 +31,10 @@ public class Main {
 			}
 			default -> System.out.println("無効な入力です");
 			}
+			scanner.close();
 		}
+		
 
 	}
+	
 }
