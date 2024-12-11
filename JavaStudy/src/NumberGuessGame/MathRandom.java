@@ -1,5 +1,6 @@
 package NumberGuessGame;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MathRandom {
@@ -10,26 +11,28 @@ public class MathRandom {
 
 		System.out.println("1～100の好きな数字を入力してください");
 
-		while (choice != targetNumber) {
+		while (true) {
 			System.out.println("数字を入力してください");
+			
 			try {
-				choice = scanner.nextInt();
-
-				if (choice < targetNumber) {
+				choice=scanner.nextInt();
+				
+				
+				if(choice<targetNumber) {
 					System.out.println("数が小さいです");
-				} else if (choice > targetNumber) {
+				}else if(choice >targetNumber) {
 					System.out.println("数が大きいです");
-				} else {
+				}else {
 					System.out.println("正解です");
 					break;
 				}
-			} catch (Exception e) {
-				System.out.println("無効な入力です");
+			}catch(InputMismatchException e) {
+				System.out.println("無効な入力です、数字を入力してください");
 				scanner.nextLine();
 			}
-			
 		}
 		System.out.println("ゲームを終了します");
 		scanner.close();
+
 	}
 }
