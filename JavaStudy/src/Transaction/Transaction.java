@@ -5,6 +5,7 @@ public class Transaction {
 	private String category;
 	private double amount;
 
+	
 	public Transaction(String date, String category, double amount) {
 		this.date = date;
 		this.category = category;

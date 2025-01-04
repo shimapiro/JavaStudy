@@ -2,6 +2,7 @@ package Transaction;
 
 import java.util.ArrayList;
 
+
 public class BudgetManager {
 
 	private ArrayList<Transaction> transactions;
@@ -10,6 +11,7 @@ public class BudgetManager {
 		transactions = new ArrayList<Transaction>();
 	}
 
+	
 	public void addTransaction(String date, String category, double amount) {
 		Transaction transaction = new Transaction(date, category, amount);
 		transactions.add(transaction);
