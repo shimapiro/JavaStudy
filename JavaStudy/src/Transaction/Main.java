@@ -9,7 +9,7 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		int choice = 0;
 		String filename = "transactions.csv";
-		
+
 		manager.setTransactions(FileManager.loadFormFile(filename));
 
 		do {
@@ -18,6 +18,7 @@ public class Main {
 			System.out.println("2:収入・支出一覧を表示");
 			System.out.println("3:現在の収入を表示");
 			System.out.println("4:終了します");
+			System.out.println("5:カテゴリーの合計金額");
 			System.out.println("１〜4を選択してください");
 
 			try {
@@ -56,6 +57,12 @@ public class Main {
 			case 4:
 				FileManager.saveToransaction(filename, manager.getTransactions());
 				System.out.println("アプリを終了します");
+				break;
+			case 5:
+				System.out.println("カテゴリーを入力してください（食費）");
+				String category = scanner.nextLine();
+				double categoryTotal = manager.calculateCategory(category);
+				System.out.println(category+"の合計："+categoryTotal+"円");
 				break;
 			default:
 				System.out.println("無効な選択です。もう一度選択してください");

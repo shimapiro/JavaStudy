@@ -41,4 +41,15 @@ public class BudgetManager {
 		this.transactions = transactions;
 	}
 
+	public double calculateCategory(String category) {
+		double total = 0;
+
+		for (Transaction transaction : transactions) {
+			if (transaction.getCategory().equals(category)) {
+				total += transaction.getAmount();
+			}
+		}
+		return total;
+	}
+
 }
