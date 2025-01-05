@@ -8,6 +8,9 @@ public class Main {
 		BudgetManager manager = new BudgetManager();
 		Scanner scanner = new Scanner(System.in);
 		int choice = 0;
+		String filename = "transactions.csv";
+		
+		manager.setTransactions(FileManager.loadFormFile(filename));
 
 		do {
 			System.out.println("家計簿メニュー");
@@ -29,11 +32,11 @@ public class Main {
 			switch (choice) {
 			case 1:
 				try {
-					System.out.println("日付を入力してください");
+					System.out.println("日付を入力してください(2025-01-01)");
 					String date = scanner.nextLine();
-					System.out.println("カテゴリーを入力してください");
+					System.out.println("カテゴリーを入力してください(食費)");
 					String category = scanner.nextLine();
-					System.out.println("金額を入力してください");
+					System.out.println("金額を入力してください(1900)");
 					double amount = scanner.nextDouble();
 					manager.addTransaction(date, category, amount);
 				} catch (Exception e) {
@@ -51,6 +54,7 @@ public class Main {
 				System.out.println("現在の金額は" + calculate + "円");
 				break;
 			case 4:
+				FileManager.saveToransaction(filename, manager.getTransactions());
 				System.out.println("アプリを終了します");
 				break;
 			default:

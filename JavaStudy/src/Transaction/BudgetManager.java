@@ -10,7 +10,6 @@ public class BudgetManager {
 		transactions = new ArrayList<Transaction>();
 	}
 
-	
 	public void addTransaction(String date, String category, double amount) {
 		Transaction transaction = new Transaction(date, category, amount);
 		transactions.add(transaction);
@@ -32,6 +31,14 @@ public class BudgetManager {
 			total += transaction.getAmount();
 		}
 		return total;
+	}
+
+	public ArrayList<Transaction> getTransactions() {
+		return transactions;
+	}
+
+	public void setTransactions(ArrayList<Transaction> transactions) {
+		this.transactions = transactions;
 	}
 
 }
